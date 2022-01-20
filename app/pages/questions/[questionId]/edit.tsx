@@ -21,11 +21,11 @@ export const EditQuestion = () => {
   return (
     <>
       <Head>
-        <title>Edit Question {question.id}</title>
+        <title>Edit Question {question.text}</title>
       </Head>
 
       <div>
-        <h1>Edit Question {question.id}</h1>
+        <h1>Edit Question {question.text}</h1>
         {/* <pre>{JSON.stringify(question, null, 2)}</pre> */}
 
         <QuestionForm
