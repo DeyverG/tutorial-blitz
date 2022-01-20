@@ -16,7 +16,7 @@ export const QuestionsList = () => {
 
   const goToPreviousPage = () => router.push({ query: { page: page - 1 } })
   const goToNextPage = () => router.push({ query: { page: page + 1 } })
-
+  console.log(questions)
   return (
     <div>
       <ul>
@@ -25,6 +25,13 @@ export const QuestionsList = () => {
             <Link href={Routes.ShowQuestionPage({ questionId: question.id })}>
               <a>{question.text}</a>
             </Link>
+            <ul>
+              {question.choices.map((choice) => (
+                <li key={choice.id}>
+                  {choice.text} - {choice.votes} votes
+                </li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>

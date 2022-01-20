@@ -9,6 +9,7 @@ export const CreateQuestion = z.object({
 
 export default resolver.pipe(resolver.zod(CreateQuestion), resolver.authorize(), async (input) => {
   // TODO: in multi-tenant app, you must add validation to ensure correct tenant
+  console.log(input)
   const question = await db.question.create({
     data: {
       ...input,
