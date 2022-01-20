@@ -23,12 +23,12 @@ const UserInfo = () => {
             await logoutMutation()
           }}
         >
-          Logout
+          Cerrar sesión
         </button>
         <div>
-          User id: <code>{currentUser.id}</code>
+          ID del usuario: <strong>{currentUser.id}</strong>
           <br />
-          User role: <code>{currentUser.role}</code>
+          Role del usuario: <strong>{currentUser.role}</strong>
         </div>
       </>
     )
@@ -37,12 +37,12 @@ const UserInfo = () => {
       <>
         <Link href={Routes.SignupPage()}>
           <a className="button small">
-            <strong>Sign Up</strong>
+            <strong>Registrarse</strong>
           </a>
         </Link>
         <Link href={Routes.LoginPage()}>
           <a className="button small">
-            <strong>Login</strong>
+            <strong>Iniciar Sesión</strong>
           </a>
         </Link>
       </>
@@ -58,7 +58,8 @@ const Home: BlitzPage = () => {
           <Image src={logo} alt="blitzjs" />
         </div>
         <p>
-          <strong>Congrats!</strong> Your app is ready, including user sign-up and log-in.
+          <strong>Felicitaciones!</strong> Tu Aplicacíon ya esta lista!. Puedes iniciar sesion y/o
+          registrarte
         </p>
         <div className="buttons" style={{ marginTop: "1rem", marginBottom: "1rem" }}>
           <Suspense fallback="Loading...">
@@ -91,32 +92,6 @@ const Home: BlitzPage = () => {
               <a>/projects</a>
             </Link>
           </p>
-        </div>
-        <div className="buttons" style={{ marginTop: "5rem" }}>
-          <a
-            className="button"
-            href="https://blitzjs.com/docs/getting-started?utm_source=blitz-new&utm_medium=app-template&utm_campaign=blitz-new"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-          <a
-            className="button-outline"
-            href="https://github.com/blitz-js/blitz"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Github Repo
-          </a>
-          <a
-            className="button-outline"
-            href="https://discord.blitzjs.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Discord Community
-          </a>
         </div>
       </main>
 
@@ -211,6 +186,7 @@ const Home: BlitzPage = () => {
           padding: 1rem 2rem;
           color: #f4f4f4;
           text-align: center;
+          border-radius: 8px;
         }
 
         .button.small {
